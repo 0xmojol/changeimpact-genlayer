@@ -53,7 +53,7 @@ curl -fsSL -o ~/.cache/gltest-direct/genvm-universal-v0.3.0-rc7.tar.xz \
 ## Current verification status
 
 - GenVM lint: passed locally (3 checks).
-- Direct Mode tests: 5 passed locally, using mocked web and LLM responses.
+- Direct Mode tests: 6 passed locally, including a digest-mismatch case proving failed retrieval does not write review state.
 - Live Studio deployment, real external-page retrieval, and full network validator behavior: not yet verified.
 
 ## Trust boundaries and limitations
@@ -63,3 +63,7 @@ curl -fsSL -o ~/.cache/gltest-direct/genvm-universal-v0.3.0-rc7.tar.xz \
 - The model output is bounded and quote-grounded, but semantic classification remains a judgment signal, not a legal interpretation.
 - Cases are public on-chain and cannot be edited or reviewed a second time after a successful review.
 - No funds, payment, identity verification, or continuous web monitoring are included.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
