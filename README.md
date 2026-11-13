@@ -50,11 +50,22 @@ curl -fsSL -o ~/.cache/gltest-direct/genvm-universal-v0.3.0-rc7.tar.xz \
   https://github.com/genlayerlabs/genvm/releases/download/v0.3.0-rc7/genvm-runners-all.tar.xz
 ```
 
-## Current verification status
+## Verification status
 
 - GenVM lint: passed locally (3 checks).
 - Direct Mode tests: 6 passed locally, including a digest-mismatch case proving failed retrieval does not write review state.
-- Live Studio deployment, real external-page retrieval, and full network validator behavior: not yet verified.
+- Live Studionet deployment and one end-to-end full-consensus review: successful.
+- The live example is one observed run, not an exhaustive test of network behavior or all validator/model conditions.
+
+## Live Studionet evidence
+
+- Network: Studionet, chain ID `61999`.
+- Contract: [`0xf563C7a685cD8C7C8B8810537b442529Dc55Eac7`](https://explorer-studio.genlayer.com/address/0xf563C7a685cD8C7C8B8810537b442529Dc55Eac7).
+- Deployment: [FINALIZED / Accepted](https://explorer-studio.genlayer.com/tx/0x5261f538b3fba69ed95fb401b84caa89667bedc99beb78447c3f6fbf0eadb220).
+- Case registration: [FINALIZED / Accepted](https://explorer-studio.genlayer.com/tx/0x5e3592763bc569bea23fd925a322ebdad0449ce40dc90acdaff88a6bfbc057a2).
+- Review: [FINALIZED / Accepted](https://explorer-studio.genlayer.com/tx/0xffba885794ddeb4074f46866163cb21548376422728f9c29beb0d2ccb381617f).
+- Read-back via `get_case`: case `demo-support-terms-v1` is `REVIEWED` with outcome `MATERIAL_CHANGE`.
+- The demonstration compares the two-day and five-day response terms; validators agreed `time: CHANGED` and the other four dimensions `MATCH`.
 
 ## Trust boundaries and limitations
 
